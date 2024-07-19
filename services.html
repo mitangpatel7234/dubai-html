@@ -27,13 +27,13 @@
 				<div class="logo"> <a href="/"><img src="assets/dist/images/weblogo.svg" alt="Logo"></a> </div>
 				<nav class="center-nav">
 					<ul class="nav-links">
-						<li><a href="spinning">CLASSES</a></li>
-						<li><a href="services" class="active">Membership</a></li>
-						<li><a href="menu">Cafe</a></li>
-						<li><a href="about">ABOUT US</a></li>
+						<li><a href="spinning.html">CLASSES</a></li>
+						<li><a href="services.html">Membership</a></li>
+						<li><a href="menu.html" class="active">Cafe</a></li>
+						<li><a href="about.html">ABOUT US</a></li>
 					</ul>
 				</nav>
-				<div class="header-buttons"> <a class="mob-menu" data-bs-toggle="modal" data-bs-target="#exampleModal-1"><img src="assets/dist/images/menu.png" alt="menu icon"> </a> <a href="contact" class="visit-button">Schedule a visit</a> <a href="contact" class="visit-button-2">Get In Touch</a> </div>
+				<div class="header-buttons"> <a class="mob-menu" data-bs-toggle="modal" data-bs-target="#exampleModal-1"><img src="assets/dist/images/menu.png" alt="menu icon"> </a> <a href="contact.html" class="visit-button">Schedule a visit</a> <a href="contact.html" class="visit-button-2">Get In Touch</a> </div>
 			</header>
 		</div>
 		<div class="modal right fade" id="exampleModal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -44,13 +44,13 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="padding-right: 30px;"><i class="fa fa-close"></i></button> 
 					</div>
 					<div class="modal-body" style="padding-right: 30px;">
-						<a href="contact" class="visit-button-1">Schedule a visit</a> 
+						<a href="contact.html" class="visit-button-1">Schedule a visit</a> 
 						<ul class="navbar-nav-menu">
-							<li class="menu-nav-item"><a href="spinning" class="menu-link">Classes</a></li>
-							<li class="menu-nav-item"><a href="services" class="menu-link">Membership</a></li>
-							<li class="menu-nav-item"><a href="menu" class="menu-link">Cafe</a></li>
-							<li class="menu-nav-item"><a href="about" class="menu-link">About us</a></li>
-							<li class="menu-nav-item"><a href="contact" class="menu-link">Get In Touch</a></li>
+							<li class="menu-nav-item"><a href="spinning.html" class="menu-link">Classes</a></li>
+							<li class="menu-nav-item"><a href="services.html" class="menu-link">Membership</a></li>
+							<li class="menu-nav-item"><a href="menu.html" class="menu-link">Cafe</a></li>
+							<li class="menu-nav-item"><a href="about.html" class="menu-link">About us</a></li>
+							<li class="menu-nav-item"><a href="contact.html" class="menu-link">Get In Touch</a></li>
 						</ul>
 						<div class="menu-address">
 							<p>Paramount Building<br/> New Link Road Behind Kohinoor, Opp Gokul Andheri West Mumbai, Maharashtra - 400053 </p>
@@ -814,6 +814,7 @@
 				<p class="copyright-text">&copy; 2024 ELITE FIT X DUBAI DATES NUTRITION INDIA</p>
 			</div>
 		</div>
+		<script src="assets/dist/js/scroll.js" defer></script>
 		<script src="assets/dist/js/bootstrap.bundle.min.js"></script><script src="assets/dist/js/podslide.js"></script> <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <script> document.getElementById('SubscribeForm').addEventListener('submit', function(e) { e.preventDefault(); var formData = new FormData(this); var xhr = new XMLHttpRequest(); xhr.open('POST', 'subscribe.php', true); xhr.onload = function() { if (xhr.status === 200) { var response = xhr.responseText; if (response === 'success') { document.getElementById('successMessage-1').style.display = 'block'; document.getElementById('errorMessage-1').style.display = 'none'; document.getElementById('SubscribeForm').reset(); } else { document.getElementById('successMessage-1').style.display = 'none'; document.getElementById('errorMessage-1').innerText = response; document.getElementById('errorMessage-1').style.display = 'block'; document.getElementById('SubscribeForm').reset(); } } else { document.getElementById('successMessage-1').style.display = 'none'; document.getElementById('errorMessage-1').innerText = 'An error occurred while submitting the form. Please try again.'; document.getElementById('errorMessage-1').style.display = 'block'; } }; xhr.send(formData); }); </script> <script> $(document).ready(function() { document.getElementById('errorMessage-1').style.display = 'none'; document.getElementById('successMessage-1').style.display = 'none'; function handleRadioChange() { if ($('#monthly').is(':checked')) { document.getElementById('contentMonthly').classList.add('slide-in-left'); document.getElementById('contentQuarterly').classList.remove('slide-in-right'); var element1 = document.getElementById("contentMonthly-1"); element1.style.display = "block"; var element2 = document.getElementById("contentQuarterly-1"); element2.style.display = "none"; } else if ($('#quarterly').is(':checked')) { document.getElementById('contentQuarterly').classList.add('slide-in-right'); document.getElementById('contentMonthly').classList.remove('slide-in-left'); var element1 = document.getElementById("contentMonthly-1"); element1.style.display = "none"; var element2 = document.getElementById("contentQuarterly-1"); element2.style.display = "block"; } } handleRadioChange(); document.querySelectorAll('input[type=radio][name=switch]').forEach(function(radio) { radio.addEventListener('change', handleRadioChange); }); }); const collapsibleButtons = document.querySelectorAll(".collapsible-trigger-btn"); collapsibleButtons.forEach((collapsibleButton) => { const collapsibleContentDataHeight = collapsibleButton.nextElementSibling.offsetHeight; collapsibleButton.nextElementSibling.style.height = 0; collapsibleButton.addEventListener("click", (e) => { if ( !e.currentTarget.parentElement.classList.contains("collapsible-tab__open") ) { e.currentTarget.parentElement.classList.toggle("collapsible-tab__open"); e.currentTarget.nextElementSibling.style.height = `${collapsibleContentDataHeight}px`; } else { e.currentTarget.parentElement.classList.remove("collapsible-tab__open"); e.currentTarget.nextElementSibling.style.height = 0; } }); }); </script> 
 	</body>
 </html>

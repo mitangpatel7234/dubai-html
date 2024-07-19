@@ -14009,7 +14009,7 @@ fieldset:disabled .btn {
 	align-items: center;
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-	border-radius: 12px;
+	/* border-radius: 12px; */
 	overflow: hidden;
 	position: relative;
 }
@@ -14718,7 +14718,7 @@ fieldset:disabled .btn {
 
 .plans {
 	background-color: rgba(238, 238, 238, 1);
-	padding-bottom: 100px;
+	padding-bottom: 20px;
 	padding-top: 10px;
 	/* margin-bottom: 5px; */
 	height: 100%;
@@ -14867,7 +14867,8 @@ fieldset:disabled .btn {
 	opacity: 0px;
 	max-width: 434px;
 	border:1px solid rgba(183, 183, 183, 1);
-	height: 480px !important
+	height: 480px !important;
+	position: relative;
 	
 }
 
@@ -14887,14 +14888,19 @@ fieldset:disabled .btn {
 	text-align: center
 }
 .pack-bottom{
-	text-align: left !important;
-	bottom: 100px !important;
-	position: fixed;
+	text-align: center !important;
+	bottom: 50px !important;
+	position: absolute;
+	left: 0;
+    right: 0;
+    
+    
 }
 .about-bottom .learn-button-1,
 .pack-more {
 	opacity: 9;
-	transition: background-color .3s
+	transition: background-color .3s;
+	
 }
 
 /* .planpackage:hover {
@@ -15017,17 +15023,19 @@ fieldset:disabled .btn {
 .mobilie-fitness-cafe h5,
 .pack-more {
 	font-weight: normal !important;
-	color: #010101
+	color: #010101;
+	
 }
 
 .pack-more {
-	padding: 14px 42px;
+	padding: 14px 55px;
 	background-color: #eee;
 	text-decoration: none;
 	border: 1px solid #010101;
 	border-radius: 100px;
 	line-height: 22.4px;
 	text-align: center;
+	
 
 }
 
@@ -15103,7 +15111,7 @@ fieldset:disabled .btn {
 	text-align: left;
 	align-items: center;
 	color: #eee;
-	border-radius: 12px;
+	/* border-radius: 12px; */
 	background: rgba(255, 255, 255, .1);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
@@ -15246,7 +15254,7 @@ fieldset:disabled .btn {
 	color: #010101;
 	padding-left: 100px !important;
 	align-items: center;
-	padding-top: 30px !important
+	padding-top: 18px !important
 }
 
 .mob-ourapp,
@@ -15377,7 +15385,7 @@ fieldset:disabled .btn {
 	text-align: left;
 	align-items: center;
 	color: #eee;
-	border-radius: 12px;
+	/* border-radius: 12px; */
 	background: rgba(255, 255, 255, .1);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
@@ -15574,7 +15582,7 @@ fieldset:disabled .btn {
 
 .services-text-container h6,
 .services-text-container p {
-	line-height: 20.76px;
+	line-height: 25.76px;
 	letter-spacing: -.5px;
 	text-align: left
 }
@@ -16135,7 +16143,7 @@ fieldset:disabled .btn {
 }
 
 .liftstyle-text-overlay-1 {
-	top: 60%;
+	top: 50%;
 	width: 100%
 }
 
@@ -16165,7 +16173,7 @@ fieldset:disabled .btn {
 
 .liftstyle-text-overlay,
 .liftstyle-text-overlay-3 {
-	top: 65%;
+	top: 50%;
 	width: 100%
 }
 
@@ -16203,7 +16211,9 @@ fieldset:disabled .btn {
 	font-weight: 300 !important;
 	text-align: left
 }
-
+.collapsibles-wrapper{
+	border-bottom: 1px solid #010101
+}
 .collapsibles-wrapper .collapsible-trigger-btn,
 .faq h4,
 .faq p,
@@ -16635,7 +16645,7 @@ visibility: visible; /* Show info when the member is active */
 	text-align: center
 }
 
-.mobile-imageslider-slide-content-1 .text-overlay,
+.-content-1 .text-overlay,
 .team-section .overlay1 .text-overlay {
 	position: absolute;
 	background: linear-gradient(127.8deg, rgba(40, 40, 40, .48) 1.63%, rgba(41, 41, 41, .12) 100%);
@@ -16849,7 +16859,7 @@ visibility: visible; /* Show info when the member is active */
 	text-align: left;
 	align-items: center;
 	color: #eee;
-	border-radius: 12px;
+	/* border-radius: 12px; */
 	background: rgba(255, 255, 255, .1);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
@@ -17016,7 +17026,7 @@ visibility: visible; /* Show info when the member is active */
 	height: auto;
 	padding: 46px;
 	text-align: left;
-	border-radius: 12px;
+	/* border-radius: 12px; */
 	background: rgba(255, 255, 255, .1);
 	z-index: 1;
 	cursor: pointer;
@@ -17723,15 +17733,29 @@ visibility: visible; /* Show info when the member is active */
 		margin-left: 20px !important;
 		margin-bottom: 50px !important;
 		flex: 0 0 23.20%; /* Adjust this value to fit 4 products per slide */
+		transition: all 0.8s ease-in-out;
+	}
+	@keyframes slideInFromBottom {
+		from {
+			transform: translateY(100%);
+			opacity: 0;
+		}
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
 	}
 	
+	.swiper-slide-active .team-mobile-imageslider-slide {
+		animation: slideInFromBottom 0.5s ease-in-out;
+	}
 	.product img {
 		width: 100%;
 		height: auto;
 		border-radius: 6px;
-	    transition: all 0.8s ease-in-out;
+	    
 	}
-	.product img:hover {
+	.product:hover {
 		scale: 1.05;
 	}
 	.product h2 {
@@ -17897,7 +17921,7 @@ visibility: visible; /* Show info when the member is active */
 	.menu-cafe-box,
 	.trainer-box,
 	.wellbeing-box {
-		border-radius: 8px
+		/* border-radius: 8px */
 	}
 
 	.community-content h6,
@@ -17992,7 +18016,9 @@ visibility: visible; /* Show info when the member is active */
 		margin: 0 !important;
 		display: none
 	}
-
+	.product:hover {
+		scale: 1;
+	}
 	.mob-menu-cafe {
 		height: 600px;
 		background-image: url('../images/mobile-food.jpg');
@@ -18053,7 +18079,10 @@ visibility: visible; /* Show info when the member is active */
 		width: 92%;
 		height: auto;
 	}
-
+	.amenitiesimg-1 img:hover{
+		object-fit: cover;
+		transform: scale(1); /* Scale up the image to 110% on hover */
+	}
 	.trainer-col {
 		padding: 14px;
 		height: 460px;
@@ -18151,7 +18180,16 @@ visibility: visible; /* Show info when the member is active */
 		object-fit: cover;
 	}
 
-	.mobile-imageslider-slide-content,
+	.mobile-imageslider-slide-content{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: left;
+		color: #eee;
+		padding: 50px;
+		width: 100%
+	}
 	.mobile-imageslider-slide-content-1 {
 		position: absolute;
 		top: 50%;
@@ -18274,7 +18312,7 @@ visibility: visible; /* Show info when the member is active */
 	.menu-cafe-box,
 	.planpackage,
 	.spinning-box {
-		border-radius: 8px !important;
+		/* border-radius: 8px !important; */
 		cursor: pointer;
 	}
 
@@ -18289,7 +18327,20 @@ visibility: visible; /* Show info when the member is active */
 		padding-right: 4%;
 		height: 600px !important
 	}
-
+	.planpackage.scrolled {
+		background-color: #000 !important;
+	  }
+	  .planpackage.scrolled .pack-more {
+		border: 1px solid #eee;
+		background-color: #000;
+		color: #eee !important;
+	  }
+	  .planpackage.scrolled h5,
+  .planpackage.scrolled h4,
+  .planpackage.scrolled .sub-title,
+  .planpackage.scrolled .packbenefits li {
+	color: #eee !important;
+  }
 	.planpackage {
 		margin-left: 6% !important;
 		margin-right: 2% !important;
@@ -18299,7 +18350,8 @@ visibility: visible; /* Show info when the member is active */
 	}
 
 	.pack-more {
-		padding: 14px 68px
+		padding: 14px 68px;
+		
 	}
 
 	.packtitles p {
@@ -18601,10 +18653,35 @@ visibility: visible; /* Show info when the member is active */
 			--angle: 420deg;
 		}
 	}
+	.team-main{
+		display: none;
+	}
+	.mobile-imageslider {
+		display: block
+	}
+	.team-mobile-imageslider-slide img {
+        width: 100%;
+        height: auto;
+        min-height: 390px !important;
+        display: block;
+        object-fit: cover;
+    }
+	.mobile-imageslider-slide-content-1 .text-overlay {
+		top:230px;
+		right: 18%;
+	}
 	.menu-cafe-box h5 {
 		font-size: 32px !important
 	}
-	
+	.ddl-cart-1 {
+		display: block
+	}
+	.ddl-cart {
+		display: none;
+	}
+	.product:hover {
+		scale: 1;
+	}
     .wellbeing-box h5 {
 		font-size: 24px !important
 	}
@@ -18612,7 +18689,12 @@ visibility: visible; /* Show info when the member is active */
     .bottom-center {
 		bottom: -72px
 	}
-
+.liftstyle{
+	display: none;
+}
+.mobile-liftstyle{
+	display: block;
+}
 	.marquee-content-items li {
 		font-size: 3.92vw !important
 	}
@@ -18628,14 +18710,19 @@ visibility: visible; /* Show info when the member is active */
 	}
 
 	.pack-more {
-		padding: 14px 14px !important;
+		padding: 14px 75px !important;
+		
 	}
 
 	.planpackage {
 		margin-top: 20px !important;
-		margin-left: 18% !important;
+		margin-left: 10% !important;
+		/* margin-bottom: 10px !important;
 		padding: 10px !important;
-		width: 100% !important
+		width: 100% !important */
+		
+		margin-bottom: 50px !important;
+		
 	}
 
 	.ourapp-box,
@@ -18671,7 +18758,12 @@ visibility: visible; /* Show info when the member is active */
 		padding: 5px 10px;
 		text-align: left
 	}
-
+	.plandata {
+		display: none !important
+	}
+	.mobile-paln{
+		display: block !important;
+	}
 	.services-container-1 {
 		padding-left: 0 !important
 	}
@@ -18697,10 +18789,16 @@ visibility: visible; /* Show info when the member is active */
 		font-size: 36px !important;
 		line-height: 32px
 	}
-
+.spining-main{
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
 	.spinning-box {
-		width: auto !important;
-		min-height: 420px !important
+		width: 400px !important;
+		/* min-height: 420px !important; */
+		justify-content: center;
+		margin-top: 10px;
 	}
 
 	.spinning-box h5 {
@@ -18718,7 +18816,7 @@ visibility: visible; /* Show info when the member is active */
 	.ourapp-box h5 {
 		font-size: 32px !important
 	}
-
+	
 	.center-nav,
 	.view-button-black,
 	.visit-button {
@@ -18731,7 +18829,15 @@ visibility: visible; /* Show info when the member is active */
 	.team-section .overlay1 .text-overlay h6 {
 		font-size: 22px !important
 	}
-
+	.ddl-cart-1 {
+		display: block
+	}
+	.ddl-cart {
+		display: none;
+	}
+	.product:hover {
+		scale: 1;
+	}
 	.mob-menu {
 		display: block
 	}
@@ -18813,7 +18919,23 @@ visibility: visible; /* Show info when the member is active */
 	.menu-cafe-box h5 {
 		font-size: 32px !important
 	}
-
+	.team-main{
+		display: none;
+	}
+	.mobile-imageslider {
+		display: block
+	}
+	.team-mobile-imageslider-slide img {
+        width: 100%;
+        height: auto;
+        min-height: 390px !important;
+        display: block;
+        object-fit: cover;
+    }
+	.mobile-imageslider-slide-content-1 .text-overlay {
+		top:250px;
+		right: 20%;
+	}
 	.trainer-box h5,
 	.wellbeing-box h5 {
 		font-size: 24px !important
@@ -18842,7 +18964,8 @@ visibility: visible; /* Show info when the member is active */
 	}
 
 	.pack-more {
-		padding: 14px 50px !important
+		padding: 14px 50px !important;
+		
 	}
 
 	.planpackage {
@@ -18943,11 +19066,28 @@ visibility: visible; /* Show info when the member is active */
 	.liftstyle-text-overlay-1 {
 		top: 30% !important
 	}
-
-	.spinning-box {
-		width: auto !important;
-		min-height: 420px !important
+	.box-roates.animate {
+		animation: borderRotate var(--d) linear infinite forwards;
+		border-radius: 0%;
+		border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
 	}
+	@keyframes borderRotate {
+		100% {
+			--angle: 420deg;
+		}
+	}
+	.spining-main{
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		gap: 5px;
+	}
+		.spinning-box {
+			width: 400px !important;
+			/* min-height: 420px !important; */
+			justify-content: center;
+			margin-top: 10px;
+		}
 
 	.spinning-box h5 {
 		font-size: 22px !important
@@ -19020,9 +19160,30 @@ visibility: visible; /* Show info when the member is active */
 	}
 
 	.pack-more {
-		padding: 14px 50px !important
+		padding: 14px 50px !important;
+		
 	}
-
+	.member:nth-child(1) {
+		z-index: 1;
+		margin-right: -150px;
+	}
+	
+	.member:nth-child(2) {
+		z-index: 3;
+		margin-left: -50px;
+		margin-right: -150px;
+	}
+	
+	.member:nth-child(3) {
+		z-index: 2;
+		margin-left: -100px;
+		margin-right: -80px;
+	}
+	
+	.member:nth-child(4) {
+		z-index: 1;
+		margin-left: -100px;
+	}
 	.planpackage {
 		margin-top: 20px !important;
 		margin-left: 8% !important;
@@ -19080,9 +19241,18 @@ visibility: visible; /* Show info when the member is active */
 		margin-top: -76px !important
 	}
 
-	.spinning-box {
-		width: auto !important
+	.spining-main{
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		gap: 5px;
 	}
+		.spinning-box {
+			width: 400px !important;
+			/* min-height: 420px !important; */
+			justify-content: center;
+			margin-top: 10px;
+		}
 
 	.whatsay-box {
 		margin-right: 0 !important
@@ -19113,11 +19283,17 @@ visibility: visible; /* Show info when the member is active */
 	#imgslider .imagbox h6,
 	#imgslider .imagbox-1 h6,
 	.trainner-details h4 {
-		font-size: 22px !important
+		font-size: 22px !important;
+		
 	}
 
 	.trainner-details h4 {
-		line-height: 28px !important
+		line-height: 28px !important;
+		
+	}
+	.trainner-details p {
+		text-align: center;
+		
 	}
 
 	.trainnerslid {
@@ -19130,7 +19306,11 @@ visibility: visible; /* Show info when the member is active */
 	}
 
 	.trainner-details {
-		padding-left: 0 !important
+		
+		text-align: center;
+		padding-left: 0 !important;
+		
+		
 	}
 
 	.community-slider-box {
@@ -19187,9 +19367,30 @@ visibility: visible; /* Show info when the member is active */
 	}
 
 	.pack-more {
-		padding: 14px 68px
+		padding: 14px 75px;
+		
 	}
-
+	.member:nth-child(1) {
+		z-index: 1;
+		margin-right: -150px;
+	}
+	
+	.member:nth-child(2) {
+		z-index: 3;
+		margin-left: -80px;
+		margin-right: -250px;
+	}
+	
+	.member:nth-child(3) {
+		z-index: 2;
+		margin-left: -100px;
+		margin-right: -80px;
+	}
+	
+	.member:nth-child(4) {
+		z-index: 1;
+		margin-left: -150px;
+	}
 	.spinning-col {
 		padding-left: 4vw !important;
 		padding-right: 4vw !important
@@ -19207,7 +19408,7 @@ visibility: visible; /* Show info when the member is active */
 
 	.trainner-details {
 		margin-bottom: 30px !important;
-		padding-top: 0 !important
+		padding-top: 18px !important
 	}
 
 	.ourapp-box {
@@ -19286,6 +19487,7 @@ visibility: visible; /* Show info when the member is active */
     }
     .pack-more, .packbenefits .title, .packbenefits li{
         font-size: 18px !important;
+		
     }
     .ourapp-box{
         width: 500px !important;

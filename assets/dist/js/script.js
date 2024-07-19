@@ -51,6 +51,24 @@ document.addEventListener('DOMContentLoaded', function() {
             swiperInstance.slideNext(); // Go to the next slide
         }
     });
-    
+    var swiper = new Swiper('.mySwiper-1', {
+        slidesPerView: 1,
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+        on: {
+            slideChangeTransitionStart: function () {
+                var slides = document.querySelectorAll('.swiper-slide .team-mobile-imageslider-slide');
+                slides.forEach(function (slide) {
+                    slide.style.animation = 'none'; // Reset animation
+                });
+            },
+            slideChangeTransitionEnd: function () {
+                var activeSlide = document.querySelector('.swiper-slide-active .team-mobile-imageslider-slide');
+                activeSlide.style.animation = 'slideInFromBottom 0.5s ease-in-out';
+            }
+        }
+    });
 });
  

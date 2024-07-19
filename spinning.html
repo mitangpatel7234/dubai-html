@@ -27,13 +27,13 @@
 				<div class="logo"> <a href="/"><img src="assets/dist/images/weblogo.svg" alt="Logo"></a> </div>
 				<nav class="center-nav">
 					<ul class="nav-links">
-						<li><a href="spinning" class="active">CLASSES</a></li>
-						<li><a href="services" >Membership</a></li>
-						<li><a href="menu">Cafe</a></li>
-						<li><a href="about">ABOUT US</a></li>
+						<li><a href="spinning.html">CLASSES</a></li>
+						<li><a href="services.html">Membership</a></li>
+						<li><a href="menu.html" class="active">Cafe</a></li>
+						<li><a href="about.html">ABOUT US</a></li>
 					</ul>
 				</nav>
-				<div class="header-buttons"> <a class="mob-menu" data-bs-toggle="modal" data-bs-target="#exampleModal-1"><img src="assets/dist/images/menu.png" alt="menu icon"> </a> <a href="contact" class="visit-button">Schedule a visit</a> <a href="contact" class="visit-button-2">Get In Touch</a> </div>
+				<div class="header-buttons"> <a class="mob-menu" data-bs-toggle="modal" data-bs-target="#exampleModal-1"><img src="assets/dist/images/menu.png" alt="menu icon"> </a> <a href="contact.html" class="visit-button">Schedule a visit</a> <a href="contact.html" class="visit-button-2">Get In Touch</a> </div>
 			</header>
 		</div>
 		<div class="modal right fade" id="exampleModal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -44,13 +44,13 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="padding-right: 30px;"><i class="fa fa-close"></i></button> 
 					</div>
 					<div class="modal-body" style="padding-right: 30px;">
-						<a href="contact" class="visit-button-1">Schedule a visit</a> 
+						<a href="contact.html" class="visit-button-1">Schedule a visit</a> 
 						<ul class="navbar-nav-menu">
-							<li class="menu-nav-item"><a href="spinning" class="menu-link">Classes</a></li>
-							<li class="menu-nav-item"><a href="services" class="menu-link">Membership</a></li>
-							<li class="menu-nav-item"><a href="menu" class="menu-link">Cafe</a></li>
-							<li class="menu-nav-item"><a href="about" class="menu-link">About us</a></li>
-							<li class="menu-nav-item"><a href="contact" class="menu-link">Get In Touch</a></li>
+							<li class="menu-nav-item"><a href="spinning.html" class="menu-link">Classes</a></li>
+							<li class="menu-nav-item"><a href="services.html" class="menu-link">Membership</a></li>
+							<li class="menu-nav-item"><a href="menu.html" class="menu-link">Cafe</a></li>
+							<li class="menu-nav-item"><a href="about.html" class="menu-link">About us</a></li>
+							<li class="menu-nav-item"><a href="contact.html" class="menu-link">Get In Touch</a></li>
 						</ul>
 						<div class="menu-address">
 							<p>Paramount Building<br/> New Link Road Behind Kohinoor, Opp Gokul Andheri West Mumbai, Maharashtra - 400053 </p>
@@ -446,23 +446,23 @@
 				</div>
 			</div>
 		</div>
-		<div class="mob-spinning-col">
+		<div class="mob-spinning-col box-class">
 			<swiper-container class="mySwiper-1" slides-per-view="1" pagination="true" pagination-dynamic-bullets="true">
 				<swiper-slide>
-					<div class="spinning-box">
+					<div class="spinning-box box-roates">
 						
 						<h5>Engages your <br/>majors</h5>
 						<p>Cycling forms an integral workout system that is often complete on its own. Reap the benefits of solid spinning classes in Andheri West and get your body moving to the tune of health.</p>
 					</div>
 				</swiper-slide>
 				<swiper-slide>
-					<div class="spinning-box">
+					<div class="spinning-box box-roates">
 						<h5>Comprehensive <br/>workout</h5>
 						<p>Spinning engages major muscles of your body to collectively burn calories, resulting in weight loss. A movement improves muscular strength and response. Muscular profile, guaranteed.</p>
 					</div>
 				</swiper-slide>
 				<swiper-slide>
-					<div class="spinning-box">
+					<div class="spinning-box box-roates">
 						<h5>Cardiovascular <br/>advantage</h5>
 						<p>Aerobic exercises are known to enhance heart functions and keep them in shape. Our spinning sessions are designed to make sure your cardiovascular health is tracked and improved. </p>
 					</div>
@@ -825,6 +825,7 @@
 				<p class="copyright-text">&copy; 2024 ELITE FIT X DUBAI DATES NUTRITION INDIA</p>
 			</div>
 		</div>
+		<script src="assets/dist/js/scroll.js" defer></script>
 		<script src="assets/dist/js/bootstrap.bundle.min.js"></script> <script src="assets/dist/js/podslide.js"></script> <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <script> document.getElementById('SubscribeForm').addEventListener('submit', function(e) { e.preventDefault(); var formData = new FormData(this); var xhr = new XMLHttpRequest(); xhr.open('POST', 'subscribe.php', true); xhr.onload = function() { if (xhr.status === 200) { var response = xhr.responseText; if (response === 'success') { document.getElementById('successMessage-1').style.display = 'block'; document.getElementById('errorMessage-1').style.display = 'none'; document.getElementById('SubscribeForm').reset(); } else { document.getElementById('successMessage-1').style.display = 'none'; document.getElementById('errorMessage-1').innerText = response; document.getElementById('errorMessage-1').style.display = 'block'; document.getElementById('SubscribeForm').reset(); } } else { document.getElementById('successMessage-1').style.display = 'none'; document.getElementById('errorMessage-1').innerText = 'An error occurred while submitting the form. Please try again.'; document.getElementById('errorMessage-1').style.display = 'block'; } }; xhr.send(formData); }); </script> <script> $(document).ready(function() { document.getElementById('successMessage-1').style.display = 'none'; document.getElementById('errorMessage-1').style.display = 'none'; function handleRadioChange() { if ($('#monthly').is(':checked')) { document.getElementById('contentMonthly').classList.add('slide-in-left'); document.getElementById('contentQuarterly').classList.remove('slide-in-right'); var element1 = document.getElementById("contentMonthly-1"); element1.style.display = "block"; var element2 = document.getElementById("contentQuarterly-1"); element2.style.display = "none"; } else if ($('#quarterly').is(':checked')) { document.getElementById('contentQuarterly').classList.add('slide-in-right'); document.getElementById('contentMonthly').classList.remove('slide-in-left'); var element1 = document.getElementById("contentMonthly-1"); element1.style.display = "none"; var element2 = document.getElementById("contentQuarterly-1"); element2.style.display = "block"; } } handleRadioChange(); document.querySelectorAll('input[type=radio][name=switch]').forEach(function(radio) { radio.addEventListener('change', handleRadioChange); }); }); function myFunction1() { document.getElementById("imgslider").style.backgroundImage = "url(assets/dist/images/slider-1.jpg)"; var element1 = document.getElementById("box1"); var element4 = document.getElementById("box4"); var element7 = document.getElementById("box7"); element1.style.display = "block"; element4.style.display = "block"; element7.style.display = "block"; element1.classList.remove('imagbox-1'); element1.classList.add('imagbox'); element4.classList.remove('imagbox'); element7.classList.remove('imagbox'); element4.classList.add('imagbox-1'); element7.classList.add('imagbox-1'); var btn1 = document.getElementById("btn-1"); var btn2 = document.getElementById("btn-2"); var btn3 = document.getElementById("btn-3"); btn1.classList.add('more-btn'); btn1.classList.remove('more-btn-1'); btn2.classList.add('more-btn-1'); btn2.classList.remove('more-btn'); btn3.classList.add('more-btn-1'); btn3.classList.remove('more-btn'); } function myFunction2() { document.getElementById("imgslider").style.backgroundImage = "url(assets/dist/images/slider-2.jpg)"; var element1 = document.getElementById("box1"); var element4 = document.getElementById("box4"); var element7 = document.getElementById("box7"); element1.style.display = "block"; element4.style.display = "block"; element7.style.display = "block"; element4.classList.add('imagbox'); element4.classList.remove('imagbox-1'); element1.classList.remove('imagbox'); element7.classList.remove('imagbox'); element1.classList.add('imagbox-1'); element7.classList.add('imagbox-1'); var btn1 = document.getElementById("btn-1"); var btn2 = document.getElementById("btn-2"); var btn3 = document.getElementById("btn-3"); btn2.classList.add('more-btn'); btn2.classList.remove('more-btn-1'); btn1.classList.add('more-btn-1'); btn1.classList.remove('more-btn'); btn3.classList.add('more-btn-1'); btn3.classList.remove('more-btn'); } function myFunction3() { document.getElementById("imgslider").style.backgroundImage = "url(assets/dist/images/slider-3.jpg)"; var element1 = document.getElementById("box1"); var element4 = document.getElementById("box4"); var element7 = document.getElementById("box7"); element1.style.display = "block"; element4.style.display = "block"; element7.style.display = "block"; element7.classList.add('imagbox'); element7.classList.remove('imagbox-1'); element1.classList.remove('imagbox'); element4.classList.remove('imagbox'); element1.classList.add('imagbox-1'); element4.classList.add('imagbox-1'); var btn1 = document.getElementById("btn-1"); var btn2 = document.getElementById("btn-2"); var btn3 = document.getElementById("btn-3"); btn3.classList.add('more-btn'); btn3.classList.remove('more-btn-1'); btn2.classList.add('more-btn-1'); btn2.classList.remove('more-btn'); btn1.classList.add('more-btn-1'); btn1.classList.remove('more-btn'); } </script> 
 		
 	</body>
